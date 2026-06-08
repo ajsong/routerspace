@@ -1,0 +1,26 @@
+{
+  "name": "9Router Codespace",
+
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+
+  "forwardPorts": [20128],
+
+  "portsAttributes": {
+    "20128": {
+      "label": "9Router",
+      "onAutoForward": "openBrowser"
+    }
+  },
+
+  "postCreateCommand": "npm install -g 9router",
+
+  "postStartCommand": "bash scripts/start.sh",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
